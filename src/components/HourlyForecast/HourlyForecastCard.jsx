@@ -11,7 +11,7 @@ const HourlyForecastCard = ({ time, currentTime = false }) => {
   const rainVolumne = 1.15;
 
   return (
-    <S_HourlyForecastCard fontWeight={currentTime ? "bold" : "400"}>
+    <S_HourlyForecastCard fontWeight={currentTime ? "700" : "400"}>
       {/* <Link to="/"> */}
       <h3 className="time">{time}</h3>
       <p className="temperature">{temperature}&deg;</p>
@@ -35,7 +35,6 @@ export default HourlyForecastCard;
 const S_HourlyForecastCard = styled.li`
   width: calc(20% - 20px);
   border-right: 1px solid;
-  text-align: center;
   font-weight: ${(props) => props.fontWeight} !important;
   border-image-source: linear-gradient(
     180deg,
@@ -46,6 +45,9 @@ const S_HourlyForecastCard = styled.li`
     hsla(0, 0%, 87.1%, 0)
   );
   border-image-slice: 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .time {
     font-weight: ${(props) => props.fontWeight};
@@ -54,5 +56,18 @@ const S_HourlyForecastCard = styled.li`
 
   .temperature {
     font-size: 36px;
+  }
+
+  .icon-weather {
+    width: 55px;
+    margin-bottom: 5px;
+  }
+
+  .icon-weather img {
+    width: 100%;
+  }
+
+  .rain-volumne {
+    font-size: 17px;
   }
 `;

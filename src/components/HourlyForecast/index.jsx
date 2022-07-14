@@ -28,7 +28,7 @@ const S_HourlyForecast = styled.section`
   padding: 16px 0;
   background-color: #fff;
   border-radius: 8px;
-  border: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 
   .title {
     margin-left: 12px;
@@ -37,7 +37,7 @@ const S_HourlyForecast = styled.section`
 
   .card-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .card-list li:nth-child(5) {

@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 import WeatherDetail from "./WeatherDetail";
+import SunClock from "./SunClock";
+import SunTime from "./SunTime";
 
-import { GiSunrise, GiSunset, GiSunbeams, GiWindSlap } from "react-icons/gi";
+import { GiSunbeams, GiWindSlap } from "react-icons/gi";
 import { FaTemperatureHigh } from "react-icons/fa";
 import { MdWaterDrop, MdCompress, MdVisibility } from "react-icons/md";
 import { TbWind } from "react-icons/tb";
-import { HiSun } from "react-icons/hi";
 
 const CurrentWeather = () => {
   const location = "Thành phố Hồ Chí Minh";
@@ -24,26 +25,8 @@ const CurrentWeather = () => {
           <p>{temperature}&deg;</p>
         </div>
         <div className="today-weather__suntime">
-          <div className="clock">
-            <div className="circle"></div>
-            <div className="sun">
-              <HiSun />
-            </div>
-          </div>
-          <div className="time">
-            <div className="sunrise">
-              <span className="icon">
-                <GiSunrise />
-              </span>
-              {sunriseTime}
-            </div>
-            <div className="sunset">
-              <span className="icon">
-                <GiSunset />
-              </span>
-              {sunsetTime}
-            </div>
-          </div>
+          <SunClock sunrise={360} sunset={1080} currentTime={900}/>
+          <SunTime sunriseTime={sunriseTime} sunsetTime={sunsetTime} />
         </div>
       </div>
       <ul className="today-weather__details">
@@ -67,7 +50,7 @@ const CurrentWeather = () => {
         <WeatherDetail
           iconComp={<GiSunbeams />}
           label="Chỉ số UV"
-          info="1 of 10"
+          info="1 / 10"
         />
         <WeatherDetail
           iconComp={<GiWindSlap />}
@@ -86,7 +69,7 @@ const S_CurrentWeather = styled.section`
   padding: 16px 0;
   background-color: #fff;
   border-radius: 8px;
-  border: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 
   .today-weather__title {
     margin-left: 12px;
@@ -109,44 +92,15 @@ const S_CurrentWeather = styled.section`
     font-weight: 600;
   }
 
-  .today-weather__suntime .clock {
-    margin-bottom: 20px;
-    position: relative;
-  }
-
-  .today-weather__suntime .time {
+  .today-weather__suntime {
     display: flex;
-  }
-
-  .today-weather__suntime .time .sunrise {
-    margin-right: 16px;
-  }
-
-  .today-weather__suntime .time .icon {
-    margin-right: 6px;
-    font-size: 25px;
-    color: #febc11;
+    flex-direction: column;
+    align-items: center;
   }
 
   .today-weather__details {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
-  }
-
-  .circle {
-    width: 100px;
-    height: 50px;
-    border-top-left-radius: 54px;
-    border-top-right-radius: 54px;
-    border: 4px solid #e87538;
-    border-bottom: none;
-  }
-
-  .sun {
-    font-size: 25px;
-    color: #febc11;
-    position: absolute;
-    top: 0;
   }
 `;

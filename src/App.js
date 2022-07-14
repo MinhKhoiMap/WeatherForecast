@@ -1,12 +1,9 @@
-import CurrentWeather from "./components/CurrentWeather";
-import HourlyForecast from "./components/HourlyForecast";
+import Home from "./pages/Home";
+
 
 function App() {
   return (
-    <>
-      <CurrentWeather />
-      <HourlyForecast />
-    </>
+    <Home />
   );
 }
 
