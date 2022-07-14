@@ -28,12 +28,21 @@ export const S_headSearch = styled.div`
     background-color: #3e394b;
     position: relative;
     color: #fff;
-    .headSearch_content{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+    input{
+            width: 370px;
+        height: 32px;
+        border-radius: 20px;
+        background-color: #3e394b;
+        position: relative;
+        color: #fff;
+        outline: none;
+        border: none;
+        padding:  0 10px;
+        &::placeholder{
+            text-align: center;
+        }
     }
+ 
     .headSearch_icon{
         position: absolute;
         top: 50%;
@@ -69,8 +78,16 @@ export const S_Navigate = styled.div`
     color: #fff;
     height: 40px;
     padding: 0 164px;
-    a{
-        text-decoration: none;
-        color: #fff;
+    .Navigate_link{
+        &.active{ 
+            border-bottom: 3px #ccc solid;
+        }
+        height: 100%;
+        display: flex;
+        align-items: center;
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
     }
 `
