@@ -1,10 +1,12 @@
 import React from 'react'
 
-const Input_search = ({setnameLocal,nameLocal,apiFetch}) => {
+const Input_search = ({setnameLocal,nameLocal,apiFetch,inforWeather}) => {
     const keyEnter = (key)=>{
         if(key==='Enter'){
-            apiFetch()
-            setnameLocal('')
+          apiFetch()
+     
+          setnameLocal('')
+          
         }
     }
   return (

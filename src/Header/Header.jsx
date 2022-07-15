@@ -17,15 +17,24 @@ import Input_search from './Input_search';
 
 const Header = () => {
     const [nameLocal, setnameLocal] = useState('') // tên đia chỉ cần tìm 
+    const [inforWeather, setInforWeather] = useState(null)//khác với cái trong fetch là chữ 's'
     const myApiKey = `7929f327fc4a780215bc2a5b14f3fe24`;
     const keyApi_currentday = `https://api.openweathermap.org/data/2.5/weather?q=${nameLocal}&appid=${myApiKey}`
     const [err, seterr] = useState(`ERROO`)
-    console.log(nameLocal)
+    // console.log(nameLocal)
     ///call API
     const apiFetch = async()=>{
         try {
             let response = await fetch(`${keyApi_currentday}`);
-            let user = await response.json();
+            let  inforWeathers = await response.json(); //toàn bộ thông tin thời tiết ngày đang nhập xc n
+            inforWeathers&&setInforWeather(inforWeathers)
+                 // thêm các địa chỉ chi nhập ở input vào local 
+          if(inforWeathers.name){ // nếu tồn tại tên thành phố khi call thì mới thêm vào local
+
+            const local = localStorage.getItem('locations') ? JSON.parse(localStorage.getItem('locations')):[]
+            localStorage.setItem('locations',JSON.stringify([...local,nameLocal]))
+          }
+
           } catch(err) {
             // catches errors both in fetch and response.json
             console.log(`lỗi rồi`)
@@ -49,7 +58,7 @@ const Header = () => {
                         setnameLocal = {setnameLocal}
                         nameLocal = {nameLocal}
                         apiFetch = {apiFetch}
-                        
+                        inforWeather = {inforWeather}
                 />
                  {/* search đia điểm , và các địa điểm sẽ đc lưu vào local */}
                 
