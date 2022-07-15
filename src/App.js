@@ -5,12 +5,15 @@ import Header from './Header/Header'
 import Nav from './Header/Nav'
 
 const App = () => {
+  const [inforWeather, setInforWeather] = useState(null)
   return (
     <div>
-        <Header/>
+        <Header inforWeather={inforWeather}
+          setInforWeather = {setInforWeather}
+        />
         <Nav/>
-        <Currently_day/>
-    </div>
+        <Currently_day inforWeather={inforWeather}/>
+    </div> 
   )
 }
 

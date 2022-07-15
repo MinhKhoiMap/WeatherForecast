@@ -37,10 +37,11 @@ export const S_headSearch = styled.div`
         color: #fff;
         outline: none;
         border: none;
-        padding:  0 10px;
+        padding:  0 80px;
         &::placeholder{
             text-align: center;
         }
+       
     }
  
     .headSearch_icon{
@@ -90,4 +91,18 @@ export const S_Navigate = styled.div`
                 color: #fff;
             }
     }
+`
+export const S_suggest= styled.ul`
+    width: 370px;
+    max-height: 240px;
+    background-color: #d1c7c7;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+    z-index: 10;
+    li{
+        list-style: none;
+    }
+
 `

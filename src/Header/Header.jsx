@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,createContext} from 'react'
 import styled from 'styled-components'
 import { FaSun } from 'react-icons/fa';
 import { FaSearchLocation } from 'react-icons/fa';
@@ -15,14 +15,18 @@ import Input_search from './Input_search';
 
 
 
-const Header = () => {
-    const [nameLocal, setnameLocal] = useState('') // tên đia chỉ cần tìm 
-    const [inforWeather, setInforWeather] = useState(null)//khác với cái trong fetch là chữ 's'
+const Header = ({inforWeather,setInforWeather}) => {
+    const [nameLocal, setnameLocal] = useState('Hưng Yên') // tên đia chỉ cần tìm 
+    // const [inforWeather, setInforWeather] = useState(null)//khác với cái trong fetch là chữ 's'
     const myApiKey = `7929f327fc4a780215bc2a5b14f3fe24`;
     const keyApi_currentday = `https://api.openweathermap.org/data/2.5/weather?q=${nameLocal}&appid=${myApiKey}`
-    const [err, seterr] = useState(`ERROO`)
-    // console.log(nameLocal)
     ///call API
+    useEffect(()=>{ // ngay khi mới vào thì call luôn ở địa điểm người dung 
+      //còn khi nhập và ấn enter ở Input_search cx call 
+      apiFetch()
+      setnameLocal('')
+    },[])
+    
     const apiFetch = async()=>{
         try {
             let response = await fetch(`${keyApi_currentday}`);
@@ -61,7 +65,6 @@ const Header = () => {
                         inforWeather = {inforWeather}
                 />
                  {/* search đia điểm , và các địa điểm sẽ đc lưu vào local */}
-                
                 <div className="headSearch_icon">
                     <FaSearchLocation/>
                 </div> 
