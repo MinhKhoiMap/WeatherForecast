@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { SiRainmeter } from "react-icons/si";
+import { GiHeavyRain } from "react-icons/gi";
 
 const HourlyForecastCard = ({ time, currentTime = false }) => {
   const temperature = 27;
@@ -22,7 +22,7 @@ const HourlyForecastCard = ({ time, currentTime = false }) => {
         />
       </figure>
       <div className="rain-volumne">
-        <SiRainmeter style={{ color: "#6adef8", marginRight: "5px" }} />
+        <GiHeavyRain style={{ color: "#6adef8", marginRight: "5px" }} />
         {rainVolumne}mm
       </div>
       {/* </Link> */}
