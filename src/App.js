@@ -8,7 +8,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Home from './components/Home'
+import Home from './pages/Home/index'
+import HourlyWeather from './pages/HourlyWeather'
 const App = () => {
   const [inforWeather, setInforWeather] = useState(null)
   return (

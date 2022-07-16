@@ -26,12 +26,13 @@ const Header = ({inforWeather,setInforWeather}) => {
       apiFetch()
       setnameLocal('')
     },[])
-    
+  
     const apiFetch = async()=>{
         try {
             let response = await fetch(`${keyApi_currentday}`);
             let  inforWeathers = await response.json(); //toàn bộ thông tin thời tiết ngày đang nhập xc n
             inforWeathers&&setInforWeather(inforWeathers)
+            console.log(response)
                  // thêm các địa chỉ chi nhập ở input vào local 
           if(inforWeathers.name){ // nếu tồn tại tên thành phố khi call thì mới thêm vào local
 
