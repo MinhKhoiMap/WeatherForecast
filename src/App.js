@@ -3,7 +3,12 @@ import { Navigate } from 'react-router-dom'
 import Currently_day from './Currently_day/Currently_day'
 import Header from './Header/Header'
 import Nav from './Header/Nav'
-
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from './components/Home'
 const App = () => {
   const [inforWeather, setInforWeather] = useState(null)
   return (
@@ -13,6 +18,11 @@ const App = () => {
         />
         <Nav/>
         <Currently_day inforWeather={inforWeather}/>
+        {/*  */}
+        <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/hourly" element={<HourlyWeather />} />
+      </Routes>
     </div> 
   )
 }
