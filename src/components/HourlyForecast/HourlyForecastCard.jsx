@@ -12,20 +12,20 @@ const HourlyForecastCard = ({ time, currentTime = false }) => {
 
   return (
     <S_HourlyForecastCard fontWeight={currentTime ? "700" : "400"}>
-      {/* <Link to="/"> */}
-      <h3 className="time">{time}</h3>
-      <p className="temperature">{temperature}&deg;</p>
-      <figure className="icon-weather">
-        <img
-          src={`http://openweathermap.org/img/wn/${iconCode}@2x.png`}
-          alt={weather}
-        />
-      </figure>
-      <div className="rain-volumne">
-        <GiHeavyRain style={{ color: "#6adef8", marginRight: "5px" }} />
-        {rainVolumne}mm
-      </div>
-      {/* </Link> */}
+      <Link to="/hourly">
+        <h3 className="time">{time}</h3>
+        <p className="temperature">{temperature}&deg;</p>
+        <figure className="icon-weather">
+          <img
+            src={`http://openweathermap.org/img/wn/${iconCode}@2x.png`}
+            alt={weather}
+          />
+        </figure>
+        <div className="rain-volumne">
+          <GiHeavyRain style={{ color: "#6adef8", marginRight: "5px" }} />
+          {rainVolumne}mm
+        </div>
+      </Link>
     </S_HourlyForecastCard>
   );
 };

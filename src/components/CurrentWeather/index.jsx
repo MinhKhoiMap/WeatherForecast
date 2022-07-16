@@ -25,7 +25,7 @@ const CurrentWeather = () => {
           <p>{temperature}&deg;</p>
         </div>
         <div className="today-weather__suntime">
-          <SunClock sunrise={360} sunset={1080} currentTime={900}/>
+          <SunClock sunrise={360} sunset={1080} currentTime={720}/>
           <SunTime sunriseTime={sunriseTime} sunsetTime={sunsetTime} />
         </div>
       </div>
@@ -69,7 +69,7 @@ const S_CurrentWeather = styled.section`
   padding: 16px 0;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
   .today-weather__title {
     margin-left: 12px;
