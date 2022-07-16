@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import HourlyWeather from "./pages/HourlyWeather";
 
 function App() {
+  console.log("quan clg")
   return (
     <BrowserRouter>
       <Routes>
