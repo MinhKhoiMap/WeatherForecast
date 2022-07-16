@@ -43,6 +43,7 @@ export default HourlyWeatherList;
 const S_HourlyWeatherList = styled.ul`
   width: 100%;
   background-color: #fff;
+  border-bottom: 1px solid #dedede;
 
   .day {
     padding: 10px 26px;

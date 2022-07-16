@@ -18,6 +18,8 @@ export default HourlyWeatherHeader;
 const S_HourlyWeatherHeader = styled.div`
   padding: 16px 26px;
   background-color: #fff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 
   .title {
     margin-bottom: 6px;

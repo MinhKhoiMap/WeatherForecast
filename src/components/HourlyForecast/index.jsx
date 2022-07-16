@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import HourlyForecastCard from "./HourlyForecastCard";
 import Button from "../Button";
@@ -9,13 +10,15 @@ const HourlyForecast = () => {
     <S_HourlyForecast>
       <h2 className="title">Dự báo mỗi 3 giờ</h2>
       <ul className="card-list">
-        <HourlyForecastCard time="Bây giờ" currentTime={true}/>
+        <HourlyForecastCard time="Bây giờ" currentTime={true} />
         <HourlyForecastCard time="23:00" />
         <HourlyForecastCard time="00:00" />
         <HourlyForecastCard time="1:00" />
         <HourlyForecastCard time="2:00" />
       </ul>
-      <Button text="48 Giờ tới" />
+      <Link to="/hourly">
+        <Button text="48 Giờ tới" />
+      </Link>
     </S_HourlyForecast>
   );
 };
