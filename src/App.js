@@ -11,6 +11,7 @@ import {
 import Home from './pages/Home/index'
 import HourlyWeather from './pages/HourlyWeather'
 import Login from './Authentication/Login'
+import Signup from './Authentication/Login'
 const App = () => {
   const [inforWeather, setInforWeather] = useState(null)
 
