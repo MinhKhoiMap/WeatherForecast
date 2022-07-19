@@ -53,9 +53,12 @@ const Header = ({inforWeather,setInforWeather}) => {
   return (
     <S_Header>
         <S_headLogo className="headLogo">
+        <Link to="/">
+
             <div className="imgLogo">
                 <FaSun/>
             </div>
+        </Link>
             <div className="contentLogo">
                 <p>THE FORECAST WEATHER</p>
             </div>
@@ -74,10 +77,10 @@ const Header = ({inforWeather,setInforWeather}) => {
         </S_headSearch>
         <S_head_User className="head_User">
             <div className="signIn">
-                <Link to="">SIGN IN</Link> {/* chỗ này để điền link */}
+                <Link to="Login">SIGN IN</Link> {/* chỗ này để điền link */}
             </div>
             <div className="signUp">
-                <Link to="">SIGN UP</Link> {/* chỗ này để điền link */}
+                <Link to="Signup">SIGN UP</Link> {/* chỗ này để điền link */}
             </div>
         </S_head_User>
       

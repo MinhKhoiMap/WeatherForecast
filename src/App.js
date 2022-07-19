@@ -10,21 +10,23 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home/index'
 import HourlyWeather from './pages/HourlyWeather'
+import Login from './Authentication/Login'
 const App = () => {
   const [inforWeather, setInforWeather] = useState(null)
 
   return (
     <div>
-        <Header inforWeather={inforWeather}
-          setInforWeather = {setInforWeather}
-        />
-        <Nav/> {/* Quân */}
+      
+        <Header inforWeather={inforWeather} setInforWeather = {setInforWeather}/>
+         
+        
+        {/* <Nav/> 
         <Currently_day inforWeather={inforWeather}/>
-        {/*  */}
-        <Home inforWeather={inforWeather}/>  {/* Sẽ chứa nội dung chính và Lịch */}
+    
+        <Home inforWeather={inforWeather}/>  */}
         <Routes>
-        <Route path="/" element={<Home />} /> {/*  Khôi */}
-        {/* <Route path="/hourly" element={<HourlyWeather />} />Khôi */}
+        <Route path="/" element={<Home />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </div> 
   )
