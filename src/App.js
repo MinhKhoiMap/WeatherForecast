@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div>
-        <Header inforWeather={inforWeather} // quân
+        <Header inforWeather={inforWeather}
           setInforWeather = {setInforWeather}
         />
         <Nav/> {/* Quân */}
@@ -23,7 +23,7 @@ const App = () => {
         {/*  */}
         <Home inforWeather={inforWeather}/>  {/* Sẽ chứa nội dung chính và Lịch */}
         <Routes>
-       {/*  <Route path="/" element={<Home/>} />  */}{/*  Khôi */}
+        <Route path="/" element={<Home />} /> {/*  Khôi */}
         {/* <Route path="/hourly" element={<HourlyWeather />} />Khôi */}
       </Routes>
     </div> 
