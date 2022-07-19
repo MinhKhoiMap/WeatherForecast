@@ -16,14 +16,24 @@ const App = () => {
   const [inforWeather, setInforWeather] = useState(null)
 
   return (
+
     <div>
-
+      <Header inforWeather={inforWeather} // quân
+        setInforWeather={setInforWeather}
+      />
+      <Nav /> {/* Quân */}
+      <Currently_day inforWeather={inforWeather} />
+      {/*  */}
+      <Home inforWeather={inforWeather} />  {/* Sẽ chứa nội dung chính và Lịch */}
       <Routes>
-
+        {/*  <Route path="/" element={<Home/>} />  */}{/*  Khôi */}
+        {/* <Route path="/hourly" element={<HourlyWeather />} />Khôi */}
         <Route path="/addtodo" element={<AddToDo />} />
         <Route path="/planned" element={<Planned />} />
       </Routes>
     </div>
+
+
   )
 }
 

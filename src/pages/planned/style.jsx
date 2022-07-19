@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SPlanned = styled.div`
-background-image: linear-gradient( #585170, #E5DFE3);
+margin-top: -230px;
 height: 100vh;
 display: flex;
 justify-content: center;
@@ -66,6 +66,8 @@ justify-content: center;
                 border-radius: 16px;
                 padding: 6px 22px;
                 color: white;
+                margin-right: 20%;
+            
                 &:hover{
                     background-color: #07d371;
                     transition: 0.5s;

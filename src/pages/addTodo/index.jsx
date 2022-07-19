@@ -3,6 +3,8 @@ import { SAddTodo } from './style'
 import Input from '../../components/inputTodo'
 import Button from '../../components/buttonTodo'
 
+
+
 const AddToDo = () => {
 
     const inittialState = {
@@ -36,6 +38,8 @@ const AddToDo = () => {
                 <Input value={addToDo.time} placeholder="Time" onChange={e => setAddToDo({ ...addToDo, time: e.target.value })} />
 
                 <Button text="ADD TO SCHEDULE" />
+
+
             </form>
         </SAddTodo>
     )
