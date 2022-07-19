@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-
+// import AddToDo from '../pages/addTodo'
+import Planned from '../../pages/planned'
 const BodySection = ({ rightContent = [], mainContent }) => {
   return (
     <S_BodySection>
       <div className="main__content">{mainContent.map((item,index) => <div key={index}>{item}</div>)}</div>
-      {/* bỏ đi thay thế cái này bằng lịch */}
-      {/* <div className="right__content">{rightContent.map((item) => item)}</div> */}
+      <Planned/> {/*  lịch  */}
     </S_BodySection>
   );
 };

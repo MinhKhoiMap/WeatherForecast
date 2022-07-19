@@ -13,7 +13,7 @@ const Nav = () => {
           <Link to="">Hôm nay </Link> {/* chỗ này để điền link */}
       </div>
       <div className="Navigate_link">
-          <Link to="">Hàng giờ </Link> {/* chỗ này để điền link */}
+          <Link to="HourlyForecast">Hàng giờ </Link> {/* chỗ này để điền link */}
       </div>
       <div className="Navigate_link">
           <Link to="">5 ngày </Link> {/* chỗ này để điền link */}
