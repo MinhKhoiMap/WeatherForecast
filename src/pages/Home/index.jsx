@@ -5,7 +5,7 @@ import BodySection from "../../components/BodySection";
 import CurrentWeather from "../../components/CurrentWeather";
 import HourlyForecast from "../../components/HourlyForecast";
 
-const Home = ({inforWeather}) => {
+const Home = ({ inforWeather }) => {
   return (
     <BodySection
       mainContent={[<CurrentWeather inforWeather={inforWeather} />, <HourlyForecast />]}
