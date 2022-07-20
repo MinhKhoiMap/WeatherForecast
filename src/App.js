@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
-import Currently_day from './Currently_day/Currently_day'
-import Header from './Header/Header'
-import Nav from './Header/Nav'
+import Currently_day from './pages/Home/Currently_day/Currently_day'
+import Header from './pages/Home/Header/Header'
+import Nav from './pages/Home/Header/Nav'
 import {
   BrowserRouter,
   Routes,
@@ -64,13 +64,14 @@ const App = () => {
     /* ///////////////////////////////////////////////////////////////// */
     <div>
       
-        <Header currentLocation={currentLocation} inforWeather={inforWeather} setInforWeather = {setInforWeather}/>
-        <Nav/>
-        <Currently_day  inforWeather={inforWeather}/>
-      
+      <Header currentLocation={currentLocation} inforWeather={inforWeather} setInforWeather = {setInforWeather}/>
+       {/* <Nav/>
+      <Currently_day  inforWeather={inforWeather}/> */}
 
         <Routes>
-            <Route path="/" element={<Home inforWeather={inforWeather} />} />
+            <Route path="/"
+  
+            element={ <Home currentLocation={currentLocation} inforWeather={inforWeather} setInforWeather = {setInforWeather}  />}  />
             <Route path="/Login" element={<Login />} />
             <Route path="/HourlyForecast" element={<HourlyForecast />} />
             <Route path="/addtodo" element={<AddToDo />} />
