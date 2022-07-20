@@ -22,7 +22,7 @@ const App = () => {
     city: '',
     country: '',
   })
-  currentLocation && console.log(currentLocation,'đây là khi có ')
+ 
   useEffect(() => {
     if (navigator.geolocation) { //check if geolocation is available
       navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -36,8 +36,8 @@ const App = () => {
     // convert latitude and longitude to address
     .then(response => response.json())
     .then(data => {
-      console.log(data.results[0].components.city);
-      console.log(data.results[0].components.country);
+      // console.log(data.results[0].components.city);
+      // console.log(data.results[0].components.country);
       setCurrentLocation({
         city: data.results[0].components.city,
         country: data.results[0].components.country,
@@ -64,9 +64,9 @@ const App = () => {
     /* ///////////////////////////////////////////////////////////////// */
     <div>
       
-        <Header inforWeather={inforWeather} setInforWeather = {setInforWeather}/>
+        <Header currentLocation={currentLocation} inforWeather={inforWeather} setInforWeather = {setInforWeather}/>
         <Nav/>
-        <Currently_day inforWeather={inforWeather}/>
+        <Currently_day  inforWeather={inforWeather}/>
       
 
         <Routes>
