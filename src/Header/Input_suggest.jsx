@@ -8,8 +8,8 @@ const Input_suggest = ({setShowSuggest,apiFetch,setnameLocal,nameLocal}) => {
          setnameLocal(e.target.innerHTML)
          console.log('khi click thi nameLocal = ',nameLocal)
          nameLocal&& apiFetch()
-         // setShowSuggest(false)
-         // setnameLocal('')
+         setShowSuggest(false)
+        //  setnameLocal('')
         }
        
     return (

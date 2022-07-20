@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SAddTodo = styled.div`
 display: flex;
 justify-content: center;
-background-image: linear-gradient( #585170, #E5DFE3);
+margin-top: -150px;
 height: 100vh;
 Button{
     margin-top: 40px;
@@ -28,7 +28,7 @@ form{
     width: 100%;
     max-width: 350px;
     height: 70vh;
-    background-color: #00B4FE;
+    background-color: #00B4FE ;
     color: #CEF0FF;
     border-radius: 8px;
     margin-top: 4%;

@@ -11,9 +11,7 @@ const Planned = () => {
         setTodos(findDate)
         const day = new Date(date).getDay()
         setDay(day)
-        if (todos.length === 0) {
 
-        }
 
     }
 
