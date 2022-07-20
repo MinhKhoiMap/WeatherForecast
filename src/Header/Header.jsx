@@ -26,6 +26,11 @@ const Header = ({inforWeather,setInforWeather}) => {
       apiFetch()
       setnameLocal('')
     },[])
+//     useEffect(()=>{
+//       if(nameLocal){
+//           apiFetch();
+//       }
+// },[nameLocal])
     const apiFetch = async()=>{
 
         try {

@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-// import AddToDo from '../pages/addTodo'
+import AddToDo from '../../pages/addTodo'
 import Planned from '../../pages/planned'
 const BodySection = ({ rightContent = [], mainContent }) => {
   return (
     <S_BodySection>
       <div className="main__content">{mainContent.map((item,index) => <div key={index}>{item}</div>)}</div>
       <Planned/> {/*  lịch  */}
+    <AddToDo/>
     </S_BodySection>
   );
 };
