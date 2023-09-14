@@ -4,7 +4,7 @@ import { app } from '../firebaseConfig';
 import {getAuth, signInWithEmailAndPassword, GoogleAuthProvider,signInWithPopup,
     sendSignInLinkToEmail, createUserWithEmailAndPassword } from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
 import '../auth.css';
 const Signup = () => {
     let auth = getAuth();
